@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="4dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <View
+        android:id="@+id/view_song_progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_song_progress"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintWidth_percent="0.0" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_cover"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerCrop"
+        android:background="#2A2A2A"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_star"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/mini_player_star_full"
+        android:visibility="gone"
+        app:tint="#4E4E4E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_song_menu"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="110dp"
+        android:layout_marginStart="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_artist"
+        app:layout_constraintEnd_toStartOf="@id/btn_song_menu"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/img_cover"
+        app:layout_constraintTop_toTopOf="@id/img_cover"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Nome da Música" />
+
+    <TextView
+        android:id="@+id/tv_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="#808080"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/img_cover"
+        app:layout_constraintEnd_toStartOf="@id/btn_song_menu"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/img_cover"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="Nome do Artista" />
+
+    <ImageView
+        android:id="@+id/btn_song_menu"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="10dp"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_add"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true"
+        app:tint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_player"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0D0D0D">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AxiformaSemiBold">
+
+        <View
+            android:id="@+id/top_glow_effect"
+            android:layout_width="412dp"
+            android:layout_height="482dp"
+            android:background="@drawable/generic_top_glow_effect"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="669dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/bg_glow_down"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_glow_effect" />
+
+        <ImageView
+            android:id="@+id/player_cover_glow"
+            android:layout_width="600dp"
+            android:layout_height="600dp"
+            android:src="@drawable/player_cover_glow"
+            android:scaleType="fitXY"
+            android:alpha="100"
+            app:layout_constraintTop_toTopOf="@id/player_cover"
+            app:layout_constraintBottom_toBottomOf="@id/player_cover"
+            app:layout_constraintStart_toStartOf="@id/player_cover"
+            app:layout_constraintEnd_toEndOf="@id/player_cover" />
+
+        <ImageView
+            android:id="@+id/btn_collapse"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:src="@drawable/return_icon"
+            app:tint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/btn_player_menu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:src="@drawable/dots_vertical"
+            app:tint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tocando Agora"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_collapse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_collapse" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/player_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="36dp"
+            android:background="#1E1E1E"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_collapse" />
+
+        <TextView
+            android:id="@+id/player_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btn_player_favorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_cover"
+            tools:text="The Palms" />
+
+        <TextView
+            android:id="@+id/player_artist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:theme="@style/AxiformaLight"
+            android:singleLine="true"
+            android:textColor="#B3B3B3"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/btn_player_favorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_title"
+            tools:text="DELACOUR" />
+
+        <ImageView
+            android:id="@+id/btn_player_favorite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="72dp"
+            android:padding="12dp"
+            android:src="@drawable/mini_player_star_empty"
+            app:layout_constraintBottom_toBottomOf="@+id/player_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/player_title"
+            app:layout_constraintVertical_bias="0.777"
+            app:tint="#4E4E4E" />
+
+        <SeekBar
+            android:id="@+id/player_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:progressTint="#FFFFFF"
+            android:thumbTint="#FFFFFF"
+            android:progressBackgroundTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_artist" />
+
+        <TextView
+            android:id="@+id/tv_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#808080"
+            android:theme="@style/InterRegular"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_seekbar"
+            tools:text="0:13" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="4dp"
+            android:textColor="#808080"
+            android:textSize="12sp"
+            android:theme="@style/InterRegular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/player_seekbar"
+            tools:text="-2:42" />
+
+        <ImageView
+            android:id="@+id/btn_add_to_playlist"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:layout_constraintBottom_toBottomOf="@+id/player_title"
+            app:layout_constraintStart_toEndOf="@+id/btn_player_favorite"
+            app:layout_constraintTop_toTopOf="@+id/player_title"
+            app:layout_constraintVertical_bias="0.777"
+            app:tint="#717171" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_current_time">
+
+            <TextView
+                android:id="@+id/btn_speed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:text="1x"
+                android:textColor="#834D9C"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_prev"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/previous_music_button" />
+
+            <ImageView
+                android:id="@+id/btn_rewind"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/return_10_seconds" />
+
+            <ImageView
+                android:id="@+id/btn_play_pause"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/white_play_music" />
+
+            <ImageView
+                android:id="@+id/btn_forward"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/skip_10_seconds" />
+
+            <ImageView
+                android:id="@+id/btn_next"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next_music_button" />
+
+            <ImageView
+                android:id="@+id/btn_runner_type"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_mode_next" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

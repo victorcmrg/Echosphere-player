@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AxiformaLight"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_search_cover"
+        android:layout_width="56dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_preview_play"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_media_play"
+        app:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="@+id/img_search_cover"
+        app:layout_constraintBottom_toBottomOf="@+id/img_search_cover"
+        app:layout_constraintStart_toStartOf="@+id/img_search_cover"
+        app:layout_constraintEnd_toEndOf="@+id/img_search_cover" />
+
+    <TextView
+        android:id="@+id/tv_search_title"
+        android:theme="@style/AxiformaSemiBold"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@+id/tv_search_artist"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search_add"
+        app:layout_constraintStart_toEndOf="@+id/img_search_cover"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Nome da Música" />
+
+    <TextView
+        android:id="@+id/tv_search_artist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:textColor="#B3B3B3"
+        android:textSize="12sp"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_search_add"
+        app:layout_constraintStart_toEndOf="@+id/img_search_cover"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_title"
+        tools:text="Canal Oficial - 3:45" />
+
+    <ImageView
+        android:id="@+id/btn_search_add"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:src="@android:drawable/ic_menu_add"
+        app:tint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

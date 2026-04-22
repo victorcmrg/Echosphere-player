@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#1E1E1E">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Editar Playlist"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <FrameLayout
+        android:id="@+id/preview_cover_container"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:background="#333333"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/preview_cover_initials"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:text="?" />
+
+        <ImageView
+            android:id="@+id/preview_cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#40000000" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@android:drawable/ic_menu_camera"
+            app:tint="#FFFFFF"/>
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/input_playlist_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nome da Playlist"
+        android:textColorHint="#808080"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D4AF37"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/input_playlist_desc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Descrição (Opcional)"
+        android:textColorHint="#808080"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#D4AF37"
+        android:inputType="text"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btn_save_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Salvar Alterações"
+        android:textColor="#121212"
+        android:backgroundTint="#D4AF37"
+        android:textStyle="bold"/>
+
+</LinearLayout>

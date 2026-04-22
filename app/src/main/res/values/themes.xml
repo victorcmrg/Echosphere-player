@@ -1,0 +1,47 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.MusicApp" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">#D4AF37</item>
+        <item name="colorOnPrimary">#121212</item>
+        <item name="colorPrimaryContainer">#B8962E</item>
+        <item name="colorOnPrimaryContainer">#FFFFFF</item>
+
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#1E1E1E</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+    </style>
+
+    <style name="Theme.MusicApp" parent="Base.Theme.MusicApp" />
+
+    <style name="CustomAlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:background">#1E1E1E</item>
+        <item name="colorSurface">#1E1E1E</item>
+
+        <item name="android:textColorPrimary">#FFFFFF</item>
+
+        <item name="shapeAppearanceOverlay">@style/RoundedDialogShape</item>
+    </style>
+
+    <style name="RoundedDialogShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="AxiformaLight" parent="">
+        <item name="android:fontFamily">@font/axiforma_light</item>
+        <item name="fontFamily">@font/axiforma_light</item>
+    </style>
+
+    <style name="AxiformaSemiBold" parent="">
+        <item name="android:fontFamily">@font/axiforma_semi_bold</item>
+        <item name="fontFamily">@font/axiforma_semi_bold</item>
+    </style>
+
+    <style name="InterRegular" parent="">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="fontFamily">@font/inter_regular</item>
+    </style>
+
+</resources>

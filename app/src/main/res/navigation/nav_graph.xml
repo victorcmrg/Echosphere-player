@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.echosphereplayer.LoginFragment"
+        android:label="Login" />
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.echosphereplayer.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/playlistsFragment"
+        android:name="com.example.echosphereplayer.PlaylistsFragment"
+        android:label="Playlists" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.echosphereplayer.SearchFragment"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.echosphereplayer.PlayerFragment"
+        android:label="Player" />
+
+    <fragment
+        android:id="@+id/playlistDetailFragment"
+        android:name="com.example.echosphereplayer.PlaylistDetailFragment"
+        tools:layout="@layout/fragment_playlist_detail" />
+
+    <fragment
+        android:id="@+id/allSongsFragment"
+        android:name="com.example.echosphereplayer.AllSongsFragment"
+        android:label="Todas as Músicas"
+        tools:layout="@layout/fragment_all_songs" />
+
+    <fragment
+        android:id="@+id/editInterfaceFragment"
+        android:name="com.example.echosphereplayer.EditInterfaceFragment"
+        android:label="EditInterfaceFragment"
+        tools:layout="@layout/fragment_edit_interface" />
+
+</navigation>
